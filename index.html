@@ -1,13 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body {
+        display: flex;
+margin: 100px auto ;
+        justify-content: center;
+    }
+
+    .btn {
+        height: 30px;
+        width: 30px;
+        margin: 10px;
+        cursor: pointer;
+        /* margin-left: 10px;
+        margin-bottom: 10px; */
+        background-color: antiquewhite;
+        padding: 10px;
+    }
+    .btn:hover{
+        transform: scale(1.2);
+    }
+    .container{
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
 <body>
+ <div class="container">
+    <div class="main">
+        <div class="btn" id="btn1"></div>
+        <div class="btn" id="btn2"></div>
+        <div class="btn" id="btn3"></div>
+    </div>
+
+    <div class="main">
+        <div class="btn" id="btn4"></div>
+        <div class="btn" id="btn5"></div>
+        <div class="btn" id="btn6"></div>
+    </div>
+
+    <div class="main">
+        <div class="btn" id="btn7"></div>
+        <div class="btn" id="btn8"></div>
+        <div class="btn" id="btn9"></div>
+    </div>
+
     
-<h1>Hello</h1>   
-<h1>sd</h1> 
+ </div>
+<script>
+    let btn1= document.getElementById("btn1")
+    let btn2= document.getElementById("btn2")
+    let btn3= document.getElementById("btn3")
+    let btn4= document.getElementById("btn4")
+    let btn5= document.getElementById("btn5")
+    let btn6= document.getElementById("btn6")
+    let btn7= document.getElementById("btn7")
+    let btn8= document.getElementById("btn8")
+    let btn9= document.getElementById("btn9")
+
+let chance="X"
+
+chsnge_chance=function()
+{
+    if(chance=="X")
+{
+    chance="O";
+}
+else{
+    chance="X"
+}
+}
+
+btn1.onclick=function()
+{
+btn1.innerText=chance;
+chsnge_chance();
+chech_win()
+
+};
+
+btn2.onclick=function()
+{
+btn2.innerText=chance;
+chsnge_chance();
+};
+
+btn3.onclick=function()
+{
+btn3.innerText=chance;
+chsnge_chance();
+};
+
+btn4.onclick=function()
+{
+btn4.innerText=chance;
+chsnge_chance();
+};
+
+btn5.onclick=function()
+{
+btn5.innerText=chance;
+chsnge_chance();
+};
+
+btn6.onclick=function()
+{
+btn6.innerText=chance;
+chsnge_chance();
+};
+
+btn7.onclick=function()
+{
+btn7.innerText=chance;
+chsnge_chance();
+};
+
+btn8.onclick=function()
+{
+btn8.innerText=chance;
+chsnge_chance();
+};
+
+btn9.onclick=function()
+{
+btn9.innerText=chance;
+chsnge_chance();
+};
+
+
+function chech_win()
+{
+    if(btn1.innerText==btn2.innerText && btn1.innerText==btn3.innerText && btn1.innerText !="") ;
+   
+{
+alert(chance + "Win")
+}
+};
+
+</script>
+
 </body>
+
 </html>
